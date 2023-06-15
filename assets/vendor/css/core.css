@@ -1,13 +1,14 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@500&display=swap');
 :root {
   --bs-blue: #007bff;
-  --bs-indigo: #6610f2;
+--bs-indigo: #A63DC5;
   --bs-purple: #696cff;
   --bs-pink: #e83e8c;
-  --bs-red: #ff3e1d;
+  --bs-red: #f7a886;
   --bs-orange: #fd7e14;
-  --bs-yellow: #ffab00;
+  --bs-yellow: #f7d186;
   --bs-green: #71dd37;
   --bs-teal: #20c997;
   --bs-cyan: #03c3ec;
@@ -20,7 +21,7 @@
   --bs-secondary: #8592a3;
   --bs-success: #71dd37;
   --bs-info: #03c3ec;
-  --bs-warning: #ffab00;
+  --bs-warning: #FF6636;
   --bs-danger: #ff3e1d;
   --bs-light: #fcfdfd;
   --bs-dark: #233446;
@@ -28,19 +29,20 @@
   --bs-gray: rgba(67, 89, 113, 0.1);
   --bs-primary-rgb: 105, 108, 255;
   --bs-secondary-rgb: 133, 146, 163;
-  --bs-success-rgb: 113, 221, 55;
+  --bs-success-rgb: #46C332;
+  --bs-success-hex: #E7EED3;
   --bs-info-rgb: 3, 195, 236;
-  --bs-warning-rgb: 255, 171, 0;
+  --bs-warning-rgb:#FF6636;
   --bs-danger-rgb: 255, 62, 29;
   --bs-light-rgb: 252, 253, 253;
-  --bs-dark-rgb: 35, 52, 70;
+  --bs-dark-rgb: #C5C9D8;
+  --bs-dark-hex: #000;
   --bs-gray-rgb: 67, 89, 113;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 67, 89, 113;
   --bs-body-color-rgb: 105, 122, 141;
   --bs-body-bg-rgb: 245, 245, 249;
-  --bs-font-sans-serif: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  --bs-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+--bs-font-sans-serif: 'Inter', sans-serif;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-root-font-size: 16px;
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -3408,7 +3410,7 @@ fieldset:disabled .btn {
 }
 
 .actives {
-  background-color: var(--bs-orange);
+  background-color: var(--bs-warning-rgb);
 }
 
 .btn-group,
@@ -4383,7 +4385,7 @@ fieldset:disabled .btn {
   width: 100%;
   padding: 2rem 0 1rem;
   font-size: 0.9375rem;
-  color: white;
+  color: var(--bs-black);
   text-align: left;
   border: 0;
   border-radius: 0;
@@ -4398,7 +4400,7 @@ fieldset:disabled .btn {
   width: 100%;
   padding: 2rem 0 0;
   font-size: 0.9375rem;
-  color: white;
+  color: var(--bs-black);
   text-align: left;
   border: 0;
   border-radius: 0;
@@ -4417,7 +4419,7 @@ fieldset:disabled .btn {
 }
 
 .accordion-button:not(.collapsed) {
-  color: white;
+  color: black;
   box-shadow: inset 0 0 0 #d9dee3;
 }
 
@@ -7312,8 +7314,8 @@ label.btn {
 
 .btn-warning {
   color: #fff;
-  background-color: #ffab00;
-  border-color: #ffab00;
+  background-color: var(--bs-warning-rgb);
+  border-color: var(--bs-warning-rgb);
   box-shadow: 0 0.125rem 0.25rem 0 rgba(255, 171, 0, 0.4);
 }
 
@@ -11206,8 +11208,7 @@ button.list-group-item-gray.active {
 }
 
 .text-warning {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
+  color: var(--bs-warning-rgb) !important;
 }
 
 .text-danger {
@@ -11221,8 +11222,7 @@ button.list-group-item-gray.active {
 }
 
 .text-dark {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
+  color: var(--bs-dark-hex) !important;
 }
 
 .text-gray {
@@ -11276,8 +11276,10 @@ button.list-group-item-gray.active {
 }
 
 .bg-success {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+  background-color: var(--bs-success-rgb)!important;
+}
+.bg-success-light {
+  background-color: var(--bs-success-hex)!important;
 }
 
 .bg-info {
@@ -11286,13 +11288,18 @@ button.list-group-item-gray.active {
 }
 
 .bg-warning {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #FF6636 !important;
+}
+.bg-warning-light {
+  background-color: var(--bs-yellow) !important;
 }
 
 .bg-danger {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important;
+}
+.bg-danger-light {
+  background-color:var(--bs-red) !important
 }
 
 .bg-playful {
@@ -11305,8 +11312,10 @@ button.list-group-item-gray.active {
 }
 
 .bg-dark {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  background-color:var(--bs-dark-rgb) !important;
+}
+.bg-dark-other {
+  background-color:var(--bs-dark-hex) !important;
 }
 
 .bg-gray {
@@ -16364,7 +16373,7 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
 
 .menu-vertical .menu-inner>.menu-item {
   margin: 0.0625rem 0;
-  line-height: 5;
+  line-height: 2.5;
 }
 
 .menu-vertical .menu-inner>.menu-item .menu-link {
@@ -17049,7 +17058,10 @@ html:not(.layout-footer-fixed) .content-wrapper {
   opacity: 1;
   transition: opacity 0.15s ease-in-out;
 }
-
+.menu-text {
+  font-family: 'Audiowide', cursive;
+  font-size: 2rem;
+}
 .app-brand-img-collapsed {
   display: none;
 }
@@ -18397,7 +18409,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
 }
 
 .update #clicked:checked ~ .update-button .div1,.update #clicked1:checked ~ .update-button .div2,.update #clicked3:checked ~ .update-button .div3,.update #clicked4:checked ~ .update-button .div4,.update #clicked5:checked ~ .update-button .div5,.update #clicked6:checked ~ .update-button .div6,.update #clicked7:checked ~ .update-button .div7,.update #clicked8:checked ~ .update-button .div8,.update #clicked9:checked ~ .update-button .div9,.update #clicked10:checked ~ .update-button .div10,.update #clicked11:checked ~ .update-button .div11,.update #clicked12:checked ~ .update-button .div12,.update #clicked13:checked ~ .update-button .div13,.update #clicked14:checked ~ .update-button .div14,.update #clicked15:checked ~ .update-button .div15,.update #clicked16:checked ~ .update-button .div16,.update #clicked17:checked ~ .update-button .div17,.update #clicked18:checked ~ .update-button .div18,.update #clicked19:checked ~ .update-button .div19,.update #clicked20:checked ~ .update-button .div20,.update #clicked21:checked ~ .update-button .div21,.update #clicked22:checked ~ .update-button .div22,.update #clicked23:checked ~ .update-button .div23,.update #clicked24:checked ~ .update-button .div24{
-background-color: orange;
+background-color: var(--bs-warning-rgb);
 color: white;
 font-weight: bold;
 border: none;
@@ -18462,9 +18474,10 @@ border: none;
   cursor: pointer;
 }
 .message-form button{
-  font-size: 1.3rem;
+  font-size: 1rem;
   position: absolute;
   height: 100%;
+  width: 20%;
   right: 0;
   top: 0%;
   right: 0%;
@@ -18476,7 +18489,7 @@ border: none;
   border: none;
   outline: none;
   border-radius: 10px;
-  padding: 2em 4em;
+  padding: 1em 4em;
 }
 .message-container p{
   cursor: pointer;
